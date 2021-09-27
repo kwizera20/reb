@@ -1,0 +1,78 @@
+
+label
+{
+  display: block;
+}
+.form-header{
+  font-size: 20px;
+ padding-left: 220px;
+ text-decoration: underline;
+ text-transform: uppercase;
+}
+.mission-order
+{
+  padding:20px;
+  padding-left: 60px;
+}
+.label
+{
+  width: 400px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.input
+{
+  float: left;
+}
+input{
+    width: 300px;
+  }
+tr{
+  padding: 40px;
+}
+.img{
+  width: 100%;
+  height:auto;
+}
+@media (max-width:500px){
+  tr{
+    display: block;
+  }
+  .signature{
+    display: block;
+  }
+}
+.signature
+{
+  padding-top: 100px;
+}
+h4{
+  padding-top: 100px;
+}
+.destination
+{
+  padding-top: 60px;
+}
+.stamp
+{
+  padding-top: 100px;
+}
+.send{
+    width: 90px;
+}
+.button{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.button1
+{
+    text-align: right;
+    padding-top: 60px;
+}
+.fcc-btn {
+  background-color: #199319;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
