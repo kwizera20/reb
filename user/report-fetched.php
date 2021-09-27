@@ -117,7 +117,20 @@ $userid=$_SESSION['userid'];
               <td><?php echo $row ['sender_name'];?></td>
               <td><?php echo $row ['sender_function'];?></td>
               <td><?php echo $row ['subdate'];?></td>
-              <td><button class="btn btn-primary"><a href="fetch-mission-order.php?id=<?php echo $row ['id'];?>">Review</a></button></td>
+              
+              <?php
+               $query3 = "SELECT * FROM reports where sender_id='$userid' ";
+               $run3 = mysqli_query($db,$query3);
+               
+               while($rows = mysqli_fetch_assoc($run3)){
+                   ?>
+                   <td>
+                   <button class="btn btn-primary"><a href="download.php?report=<?php echo $rows ['report_attachement']; ?>">Download</a></button>
+                   </td>
+               <?php
+               }
+               ?>
+               
               </tr>
               <?php
             }

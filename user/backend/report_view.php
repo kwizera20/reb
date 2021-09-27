@@ -7,16 +7,16 @@ $select="SELECT * FROM users where id='$userid' ";
 $query=mysqli_query($conn,$select);
 $row=mysqli_fetch_assoc($query);
 
-if($row['role']==dg){
+if($row['role']=="dg"){
     $sql="SELECT * from reports";
     $query1=mysqli_query($db,$sql);
     if(mysqli_num_rows($query1)>0){
 }
-}elseif($row['role']==hod){
+}elseif($row['role']=="hod"){
     $sql="SELECT * from reports where  sender_function='ud' OR sender_function='other';";
 $query1=mysqli_query($db,$sql);
 if(mysqli_num_rows($query1)>0){}
-}elseif($row['role']==ud){
+}elseif($row['role']=="ud"){
     $sql="SELECT * from reports where  sender_function='other';";
 $query1=mysqli_query($db,$sql);
 if(mysqli_num_rows($query1)>0){}

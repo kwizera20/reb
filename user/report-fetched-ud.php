@@ -115,7 +115,7 @@ if($row['role']=="ud"){
               <td><?php echo $row1 ['sender_name'];?></td>
               <td><?php echo $row1 ['sender_function'];?></td>
               <td><?php echo $row1['subdate'];?></td>
-              <td><button class="btn btn-primary"><a href="fetch-mission-order.php?id=<?php echo $row ['id'];?>">Review</a></button></td>
+              <td><button class="btn btn-primary"><a href="download.php?id=<?php echo $row ['id'];?>">Download</a></button></td>
               </tr>
               <?php
             }

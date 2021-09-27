@@ -28,7 +28,7 @@
         $sql=mysqli_query($db,$insert);
         if($sql){
              echo "<script>alert('Your report has been successfully submitted. ')</script>";
-             echo "<meta http-equiv='refresh' content='2; url=../index.php'>";
+             echo "<meta http-equiv='refresh' content='2; url=../report.php'>";
       
     }else{
         echo "<script>alert('Submission Failed. Try again. ')</script>";

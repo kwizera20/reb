@@ -50,7 +50,21 @@ include("backend/auth.php");
       <?php
 
         include "includes/navbar.php";
-        include "includes/sidebar.php";
+        $userid=$_SESSION['userid'];
+        $select="SELECT * FROM users where id='$userid' ";
+        $query=mysqli_query($db,$select);
+        $row=mysqli_fetch_assoc($query);
+        
+if($row['role']=="dg"){
+  include "includes/dg-sidebar.php";
+}
+elseif($row['role']=="hod"){
+  include "includes/hod-sidebar.php";
+}elseif($row['role']=="ud"){
+  include "includes/ud-sidebar.php";
+}else{
+  include "includes/sidebar.php";
+}
       ?>
     <section id="main-content" class="container" >
       <section class="wrapper">
